@@ -8,7 +8,7 @@ const cors = require("cors"); //enable CORS
 require('body-parser-xml')(bodyParser);
 const port = process.env.PORT || 8003;
 const corsOptions ={
-  origin:"http://localhost:3000", 
+  origin:"*", 
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200,
 }
