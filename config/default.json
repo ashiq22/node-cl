@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://Hanzalah:Hanzalah@cluster0.yduu7.mongodb.net/csci3100?retryWrites=true&w=majority",
+  "jwtSecret": "sl_myJwtSecret"
+}
