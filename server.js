@@ -29,9 +29,9 @@ app.use(cors());
 app.options('*', cors());
 app.use(bodyParser.xml());
 
-app.get('/', (req,res)=>{
-  res.json("Server Start")
- })
+// app.get('/', (req,res)=>{
+//   res.json("Server Start")
+//  })
 
 mongoose.set('useUnifiedTopology', true); // get rid of the Deprecation Warning
 const db = process.env.DATABASE
