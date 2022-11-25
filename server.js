@@ -8,7 +8,7 @@ const cors = require("cors"); //enable CORS
 require('body-parser-xml')(bodyParser);
 
 const port = process.env.PORT || 8003;
-const config = require("config");
+
 
 // routes
 //import authRoutes from './routes/api/auth';
