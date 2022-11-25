@@ -53,7 +53,4 @@ app.use('/api/blockuser', blockuserRoutes);
 app.use(bodyParser.xml());
 
 
-const server = app.listen(port,'0.0.0.0', () => console.log(`Server started on port ${port}`));
-const io = require('socket.io')(server);
-
-app.set('socketio', io);  //enable real-time communication between the client and server
+const server = app.listen(port, () => console.log(`Server started on port ${port}`));
