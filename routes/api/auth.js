@@ -39,9 +39,7 @@ const JWT_SECRET = config.get("jwtSecret");
    }
  });
 
- router.get('/test', (req,res)=>{
-  res.json("Server Start")
- })
+
 
 /**
  * @route   POST api/auth/login

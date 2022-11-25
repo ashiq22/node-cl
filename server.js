@@ -47,7 +47,9 @@ app.use('/api/communityuser', communityuserRoutes);
 app.use('/api/notification', notificationRoutes);
 app.use('/api/blockuser', blockuserRoutes);
 app.use(bodyParser.xml());
-
+app.get('/', (req,res)=>{
+  res.json("Server Start")
+ })
 const server = app.listen(port,'0.0.0.0', () => console.log(`Server started on port ${port}`));
 const io = require('socket.io')(server);
 
