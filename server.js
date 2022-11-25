@@ -53,4 +53,4 @@ app.use('/api/blockuser', blockuserRoutes);
 app.use(bodyParser.xml());
 
 
-const server = app.listen(port, () => console.log(`Server started on port ${port}`));
+const server = app.listen(port, '0.0.0.0', () => console.log(`Server started on port ${port}`));
