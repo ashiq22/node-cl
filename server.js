@@ -31,7 +31,7 @@ app.use(bodyParser.json());
 // const db = config.get('mongoURI');
 app.use(cors({
     origin: '*'
-    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+   
 }));
 app.options('*', cors());
 app.use(bodyParser.xml());
@@ -42,8 +42,7 @@ app.get('/', (req,res)=>{
   res.header("Access-Control-Allow-Origin", "true");
    res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, 
-    Accept, x-client-key, x-client-token, x-client-secret, Authorization");
+    
   
   res.json("Server Started")
  })
