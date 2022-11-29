@@ -30,7 +30,8 @@ const app = express();
 app.use(bodyParser.json());
 // const db = config.get('mongoURI');
 app.use(cors({
-    origin: 'https://sunnysocial.netlify.app/signup'
+    origin: '*'
+    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 }));
 app.options('*', cors());
 app.use(bodyParser.xml());
