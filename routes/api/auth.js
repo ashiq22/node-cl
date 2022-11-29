@@ -86,6 +86,9 @@ router.post('/login', async (req, res) => {
  */
 
 router.post('/register', async (req, res) => {
+	  res.header("Access-Control-Allow-Origin", "true");
+   res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
   var userid = 1;
   var userrole = "user";
   var user1 = await User.findOne({}).sort({user_id: -1});
