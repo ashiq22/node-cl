@@ -36,7 +36,7 @@ app.use(function(req, res, next) {
   next();
   });
 app.get('/', (req,res)=>{
-  res.json("Server Start")
+  res.json("Server Started")
  })
 
  
@@ -60,5 +60,5 @@ app.use('/api/notification', notificationRoutes);
 app.use('/api/blockuser', blockuserRoutes);
 app.use(bodyParser.xml());
 
-
+ 
 const server = app.listen(port, '0.0.0.0', () => console.log(`Server started on port ${port}`));
