@@ -29,13 +29,18 @@ const blockuserRoutes = require("./routes/api/blockuser");
 const app = express();
 app.use(bodyParser.json());
 // const db = config.get('mongoURI');
-app.use(cors());
+app.use(cors({
+    origin: 'https://sunnysocial.netlify.app/signup'
+}));
 app.options('*', cors());
 app.use(bodyParser.xml());
 app.use(function(req, res, next) {
   next();
   });
 app.get('/', (req,res)=>{
+  res.header("Access-Control-Allow-Origin", "true");
+  
+  
   res.json("Server Started")
  })
 
