@@ -7,12 +7,12 @@ const bodyParser = require("body-parser"); // get body content from a form
 const cors = require("cors"); //enable CORS
 require('body-parser-xml')(bodyParser);
 const port = process.env.PORT || 8003;
- const corsOptions ={
-   origin:"*", 
-      credentials:true,            //access-control-allow-credentials:true
-   optionSuccessStatus:200,
- }
- app.use(cors(corsOptions)) // Use this after the variable declaration
+// const corsOptions ={
+//   origin:"*", 
+//   credentials:true,            //access-control-allow-credentials:true
+//   optionSuccessStatus:200,
+// }
+// app.use(cors(corsOptions)) // Use this after the variable declaration
 
 // routes
 //import authRoutes from './routes/api/auth';
@@ -29,8 +29,8 @@ const blockuserRoutes = require("./routes/api/blockuser");
 const app = express();
 app.use(bodyParser.json());
 // const db = config.get('mongoURI');
-//app.use(cors());
-//app.options('*', cors());
+app.use(cors());
+app.options('*', cors());
 app.use(bodyParser.xml());
 app.use(function(req, res, next) {
   next();
