@@ -29,10 +29,7 @@ const blockuserRoutes = require("./routes/api/blockuser");
 const app = express();
 app.use(bodyParser.json());
 // const db = config.get('mongoURI');
-app.use(cors({
-    origin: '*'
-   
-}));
+app.use(cors({credentials: true, origin: '*', crossorigin:true}));
 app.options('*', cors());
 app.use(bodyParser.xml());
 app.use(function(req, res, next) {
