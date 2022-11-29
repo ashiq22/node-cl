@@ -6,7 +6,7 @@ const mongoose = require("mongoose"); // connect to database
 const bodyParser = require("body-parser"); // get body content from a form
 const cors = require("cors"); //enable CORS
 require('body-parser-xml')(bodyParser);
-const port = process.env.PORT || 8003;
+const port = process.env.PORT || 8080;
 // const corsOptions ={
 //   origin:"*", 
 //   credentials:true,            //access-control-allow-credentials:true
